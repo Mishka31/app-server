@@ -2,6 +2,8 @@ const express = require('express');
 const exhbs = require('express-handlebars');
 const products = require('./products.json');
 
+const PORT = process.env.PORT || 777;
+
 const app = express();
 
 app.use(express.static('public'));
@@ -36,6 +38,6 @@ app.get('/product/:productId', (req, res) => {
   });
 });
 //local host
-app.listen(777, () => {
-  console.log(`good!, running on port ${777}`);
+app.listen(PORT, () => {
+  console.log(`good!, running on port ${PORT}`);
 });
