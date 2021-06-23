@@ -17,6 +17,10 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
   res.render('about');
 });
+//http://localhost:777/about
+app.get('/products', (req, res) => {
+  res.render('products');
+});
 
 app.listen(777, () => {
   console.log(`good!, running on port ${777}`);
